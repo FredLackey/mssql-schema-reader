@@ -1,6 +1,6 @@
 {
   "name": "mssql-schema-reader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Saves SQL Server (MSSQL) schema to JSON or file.",
   "main": "index.js",
   "directories": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/FredLackey/mssql-schema-reader#readme",
   "dependencies": {
+    "moment": "^2.10.6",
     "mssql": "^2.3.1"
   }
 }
