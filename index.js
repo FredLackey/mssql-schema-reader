@@ -12,8 +12,8 @@ var fromServerRaw = function (config, callback) {
         return callback(null, info);
     })
 };
-var fromServerToDiskRaw = function (config, filePath, callback) {
-    lib.db.fetchWithSave(config, filePath, function (err, info) {
+var fromServerToDiskRaw = function (config, filePath, saveLastVersion, callback) {
+    lib.db.fetchWithSave(config, filePath, saveLastVersion, function (err, info) {
         if (err) { return callback(err); }
         return callback(null, info);
     })
@@ -33,8 +33,8 @@ var fromServer = function (config, callback) {
         return callback(null, parser.getSchema());
     })
 };
-var fromServerToDisk = function (config, filePath, callback) {
-    lib.db.fetchWithSave(config, filePath, function (err, info) {
+var fromServerToDisk = function (config, filePath, saveLastVersion, callback) {
+    lib.db.fetchWithSave(config, filePath, saveLastVersion, function (err, info) {
         if (err) { return callback(err); }
         var parser = lib.parser(info);
         return callback(null, parser.getSchema());
