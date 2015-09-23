@@ -1,0 +1,865 @@
+{
+    "database": "TestDatabase20150922",
+    "server": "localhost",
+    "user": "sa",
+    "created": "2015-09-23T00:37:30.199Z",
+    "owners": [
+        {
+            "name": "Communications",
+            "isDefault": false,
+            "tables": [
+                {
+                    "name": "Message",
+                    "owner": "Communications",
+                    "isDefaultOwner": false,
+                    "columns": [
+                        {
+                            "name": "Id",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": true,
+                            "pkPosition": 1
+                        },
+                        {
+                            "name": "Uid",
+                            "position": 2,
+                            "defaultValue": "(newid())",
+                            "isNullable": false,
+                            "nativeType": "uniqueidentifier",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "FromAddress",
+                            "position": 3,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 255,
+                            "maxOctetLength": 255,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "Subject",
+                            "position": 4,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 255,
+                            "maxOctetLength": 255,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "AuditDeletedDate",
+                            "position": 5,
+                            "defaultValue": null,
+                            "isNullable": true,
+                            "nativeType": "datetime",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "AuditVersionDate",
+                            "position": 6,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "datetime",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "AuditMemberUid",
+                            "position": 7,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": true,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ],
+                    "indicies": [
+                        {
+                            "id": 2,
+                            "name": "IX_MESSAGE",
+                            "type": "NONCLUSTERED",
+                            "isUnique": false,
+                            "isPrimaryKey": false,
+                            "columns": [
+                                {
+                                    "id": 1,
+                                    "name": "AuditDeletedDate"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "IX_MESSAGE_1",
+                            "type": "NONCLUSTERED",
+                            "isUnique": false,
+                            "isPrimaryKey": false,
+                            "columns": [
+                                {
+                                    "id": 1,
+                                    "name": "FromAddress"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "AuditDeletedDate"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "views": []
+        },
+        {
+            "name": "dbo",
+            "isDefault": true,
+            "tables": [
+                {
+                    "name": "BogusCode",
+                    "owner": "dbo",
+                    "isDefaultOwner": true,
+                    "columns": [
+                        {
+                            "name": "Code",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "char",
+                            "maxLength": 1,
+                            "maxOctetLength": 1,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": true,
+                            "pkPosition": 1
+                        },
+                        {
+                            "name": "Name",
+                            "position": 2,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 50,
+                            "maxOctetLength": 50,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ],
+                    "indicies": []
+                },
+                {
+                    "name": "BogusIdentifier",
+                    "owner": "dbo",
+                    "isDefaultOwner": true,
+                    "columns": [
+                        {
+                            "name": "Uid",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "uniqueidentifier",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": true,
+                            "pkPosition": 1
+                        },
+                        {
+                            "name": "Value",
+                            "position": 2,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 255,
+                            "maxOctetLength": 255,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ],
+                    "indicies": []
+                }
+            ],
+            "views": []
+        },
+        {
+            "name": "MemberManagement",
+            "isDefault": false,
+            "tables": [
+                {
+                    "name": "Member",
+                    "owner": "MemberManagement",
+                    "isDefaultOwner": false,
+                    "columns": [
+                        {
+                            "name": "Id",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [
+                                {
+                                    "owner": "Communications",
+                                    "table": "Message",
+                                    "column": "AuditMemberUid"
+                                },
+                                {
+                                    "owner": "MemberManagement",
+                                    "table": "MemberSignupRequest",
+                                    "column": "MemberId"
+                                }
+                            ],
+                            "isPrimaryKey": true,
+                            "pkPosition": 1
+                        },
+                        {
+                            "name": "Uid",
+                            "position": 2,
+                            "defaultValue": "(newid())",
+                            "isNullable": false,
+                            "nativeType": "uniqueidentifier",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "UserName",
+                            "position": 3,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 255,
+                            "maxOctetLength": 255,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "PassHash",
+                            "position": 4,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 50,
+                            "maxOctetLength": 50,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "PassSalt",
+                            "position": 5,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 50,
+                            "maxOctetLength": 50,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "AuditVersionDate",
+                            "position": 6,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "datetime",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "AuditDeletedDate",
+                            "position": 7,
+                            "defaultValue": null,
+                            "isNullable": true,
+                            "nativeType": "datetime",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ],
+                    "indicies": [
+                        {
+                            "id": 2,
+                            "name": "IX_MEMBER",
+                            "type": "NONCLUSTERED",
+                            "isUnique": true,
+                            "isPrimaryKey": false,
+                            "columns": [
+                                {
+                                    "id": 1,
+                                    "name": "UserName"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "AuditDeletedDate"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "MemberSignupRequest",
+                    "owner": "MemberManagement",
+                    "isDefaultOwner": false,
+                    "columns": [
+                        {
+                            "name": "Id",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": true,
+                            "pkPosition": 1
+                        },
+                        {
+                            "name": "Uid",
+                            "position": 2,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "uniqueidentifier",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "SignupRequestId",
+                            "position": 3,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": true,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "MemberId",
+                            "position": 4,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": true,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ],
+                    "indicies": [
+                        {
+                            "id": 2,
+                            "name": "IX_MEMBERSIGNUPREQUEST",
+                            "type": "NONCLUSTERED",
+                            "isUnique": true,
+                            "isPrimaryKey": false,
+                            "columns": [
+                                {
+                                    "id": 1,
+                                    "name": "SignupRequestId"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "IX_MEMBERSIGNUPREQUEST_1",
+                            "type": "NONCLUSTERED",
+                            "isUnique": true,
+                            "isPrimaryKey": false,
+                            "columns": [
+                                {
+                                    "id": 1,
+                                    "name": "MemberId"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "name": "IX_MEMBERSIGNUPREQUEST_2",
+                            "type": "NONCLUSTERED",
+                            "isUnique": true,
+                            "isPrimaryKey": false,
+                            "columns": [
+                                {
+                                    "id": 1,
+                                    "name": "Uid"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "SignupRequest",
+                    "owner": "MemberManagement",
+                    "isDefaultOwner": false,
+                    "columns": [
+                        {
+                            "name": "Id",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [
+                                {
+                                    "owner": "MemberManagement",
+                                    "table": "MemberSignupRequest",
+                                    "column": "SignupRequestId"
+                                }
+                            ],
+                            "isPrimaryKey": true,
+                            "pkPosition": 1
+                        },
+                        {
+                            "name": "EmailAddress",
+                            "position": 2,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 255,
+                            "maxOctetLength": 255,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "ConfirmationCode",
+                            "position": 3,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "char",
+                            "maxLength": 6,
+                            "maxOctetLength": 6,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "AuditDeletedDate",
+                            "position": 4,
+                            "defaultValue": null,
+                            "isNullable": true,
+                            "nativeType": "datetime",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ],
+                    "indicies": [
+                        {
+                            "id": 2,
+                            "name": "IX_SIGNUPREQUEST",
+                            "type": "NONCLUSTERED",
+                            "isUnique": true,
+                            "isPrimaryKey": false,
+                            "columns": [
+                                {
+                                    "id": 1,
+                                    "name": "EmailAddress"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "AuditDeletedDate"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ActiveMember",
+                    "owner": "MemberManagement",
+                    "isDefaultOwner": false,
+                    "columns": [
+                        {
+                            "name": "Id",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "Uid",
+                            "position": 2,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "uniqueidentifier",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "UserName",
+                            "position": 3,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 255,
+                            "maxOctetLength": 255,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "PassHash",
+                            "position": 4,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 50,
+                            "maxOctetLength": 50,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "PassSalt",
+                            "position": 5,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 50,
+                            "maxOctetLength": 50,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ],
+                    "indicies": []
+                }
+            ],
+            "views": [
+                {
+                    "name": "ActiveMember",
+                    "owner": "MemberManagement",
+                    "isDefaultOwner": false,
+                    "columns": [
+                        {
+                            "name": "Id",
+                            "position": 1,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "bigint",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": 19,
+                            "scale": 0,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "Uid",
+                            "position": 2,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "uniqueidentifier",
+                            "maxLength": null,
+                            "maxOctetLength": null,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": null,
+                            "collation": null,
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "UserName",
+                            "position": 3,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 255,
+                            "maxOctetLength": 255,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "PassHash",
+                            "position": 4,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 50,
+                            "maxOctetLength": 50,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        },
+                        {
+                            "name": "PassSalt",
+                            "position": 5,
+                            "defaultValue": null,
+                            "isNullable": false,
+                            "nativeType": "varchar",
+                            "maxLength": 50,
+                            "maxOctetLength": 50,
+                            "precision": null,
+                            "scale": null,
+                            "charSet": "iso_1",
+                            "collation": "SQL_Latin1_General_CP1_CI_AS",
+                            "isForeignKey": false,
+                            "fkTarget": {},
+                            "fkSources": [],
+                            "isPrimaryKey": false,
+                            "pkPosition": -1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
