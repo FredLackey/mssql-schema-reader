@@ -1,6 +1,6 @@
 {
   "name": "mssql-schema-reader",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Saves SQL Server (MSSQL) schema to JSON or file.",
   "main": "index.js",
   "directories": {
@@ -15,15 +15,23 @@
   },
   "keywords": [
     "mssql",
+    "sql server",
+    "sql" 
     "schema",
     "json"
+    "api",
+    "scaffold"
   ],
-  "author": "Fred Lackey <fred.lackey@gmail.com>",
+  "author": {
+    "name": "Fred Lackey",
+    "email": "fred.lackey@gmail.com",
+    "url": "https://github.com/FredLackey"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FredLackey/mssql-schema-reader/issues"
   },
-  "homepage": "https://github.com/FredLackey/mssql-schema-reader#readme",
+  "homepage": "https://github.com/FredLackey/mssql-schema-reader",
   "dependencies": {
     "moment": "^2.10.6",
     "mssql": "^2.3.1"
