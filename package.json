@@ -1,6 +1,6 @@
 {
   "name": "mssql-schema-reader",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Saves SQL Server (MSSQL) schema to JSON or file.",
   "main": "index.js",
   "directories": {
@@ -16,7 +16,7 @@
   "keywords": [
     "mssql",
     "sql server",
-    "sql" 
+    "sql",
     "schema",
     "json"
     "api",
